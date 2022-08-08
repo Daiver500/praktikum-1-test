@@ -1,0 +1,121 @@
+.wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* stylelint-disable-next-line */
+  min-height: calc(100 * var(--vh, 1vh));
+
+  .header,
+  .footer {
+    flex-shrink: 0;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.scroll-lock-ios {
+  position: fixed;
+
+  overflow: hidden;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.no-transition {
+  /* stylelint-disable-next-line */
+  transition: none !important;
+}
+
+.color-blue {
+  color: $color-pacific-blue;
+}
+
+.color-grey {
+  color: $color-tapa;
+}
+
+.color-black {
+  color: $color-el-passo;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.color-red {
+  color: $color-red-orange;
+}
+
+.grid-3 {
+  display: grid;
+  column-gap: 16px;
+  row-gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-4 {
+  display: grid;
+  column-gap: 16px;
+  row-gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include vp-1023 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.desktop-only {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
