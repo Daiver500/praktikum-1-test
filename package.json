@@ -21,7 +21,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/pug/pages/index.pug --open --port 3000 --dist-dir build --no-source-maps --public-url ./",
+    "start": "parcel src/pug/pages/index.pug --open --port 3000 --dist-dir build --no-source-maps",
     "build": "rm -rf build/* && parcel build src/pug/pages/index.pug --dist-dir build --no-source-maps --public-url ./"
   },
   "repository": {

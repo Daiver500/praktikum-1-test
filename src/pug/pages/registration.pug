@@ -1,5 +1,7 @@
 doctype html
 
+include ../components/components
+
 html(lang="ru")
   head
     title= title
@@ -16,6 +18,7 @@ html(lang="ru")
     main
       h1.title REGISTER
 
-    block modals
+  +modal(data)
+
 
     script(type="module" src="../../js/app.js")
