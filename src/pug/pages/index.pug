@@ -1,3 +1,5 @@
+include ../components/components
+
 doctype html
 
 html(lang="ru")
@@ -6,15 +8,14 @@ html(lang="ru")
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    meta(name="description", content="ImmunoHealth")
-    //link(rel="preload", href="fonts/averta-regular.woff2", as="font", crossorigin="anonymous")
-    //link(rel="preload", href="fonts/averta-SemiBold.woff2", as="font", crossorigin="anonymous")
+    meta(name="description", content="login-login-form.scss")
+    //link(rel="preload", href="../../fonts/inter-regular.woff2", as="font", crossorigin="anonymous")
+    //link(rel="preload", href="../../fonts/inter-medium.woff2", as="font", crossorigin="anonymous")
     link(rel="stylesheet", href="../../sass/style.scss")
 
 
   body
     main
-      h1.title.title--black HELLO
-      a(href="registration.pug") 111
+      +login-form(loginFormData).login-form--enter
 
     script(type="module" src="../../js/app.js")

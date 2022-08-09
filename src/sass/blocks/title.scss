@@ -1,15 +1,8 @@
 .title {
-  color: orange;
+  color: $color-nero;
   font-size: 20px;
   line-height: 20px;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
-.title--small {
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 600;
-}
-
-.title--black {
-  color: black;
-}

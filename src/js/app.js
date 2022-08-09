@@ -1,9 +1,9 @@
 import '../js/index';
-import {test} from '../js/modules/test';
+import {initInput} from './modules/init-input';
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  test();
+  initInput();
 });
 
 

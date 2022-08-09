@@ -1,6 +1,6 @@
-doctype html
-
 include ../components/components
+
+doctype html
 
 html(lang="ru")
   head
@@ -14,11 +14,8 @@ html(lang="ru")
     link(rel="stylesheet", href="../../sass/style.scss")
 
 
-  body
-    main
-      h1.title REGISTER
+body
+  main
+    +login-form(regFormData).login-form--reg
 
-  +modal(data)
-
-
-    script(type="module" src="../../js/app.js")
+  script(type="module" src="../../js/app.js")
