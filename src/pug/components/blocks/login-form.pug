@@ -1,0 +1,78 @@
+-
+  const loginFormData = {
+    title: 'Вход',
+    buttonText: 'Авторизироваться',
+    linkText: 'Нет аккаунта?',
+    link: 'registration.pug',
+  }
+
+  const regFormData = {
+    title: 'Регистрация',
+    buttonText: 'Зарегистрироваться',
+    linkText: 'Войти',
+    link: 'index.pug',
+  }
+
+
+mixin login-form(data)
+  .login-form(class!=attributes.class)
+    h1.title!=data.title
+    form
+
+      if (data === loginFormData)
+        +form-input({
+          inputLabel: 'Логин',
+          inputType: 'text',
+          inputError: 'Неверный логин',
+          inputPlaceholder: 'Логин',
+        })
+        +form-input({
+          inputLabel: 'Пароль',
+          inputType: 'password',
+          inputError: 'Неверный пароль',
+          inputPlaceholder: 'Пароль',
+        })
+
+      if (data === regFormData)
+        +form-input({
+          inputLabel: 'Почта',
+          inputType: 'email',
+          inputPlaceholder: 'Почта',
+        })
+        +form-input({
+          inputLabel: 'Логин',
+          inputType: 'text',
+          inputPlaceholder: 'Логин',
+        })
+        +form-input({
+          inputLabel: 'Имя',
+          inputType: 'text',
+          inputPlaceholder: 'Имя',
+        })
+        +form-input({
+          inputLabel: 'Фамилия',
+          inputType: 'text',
+          inputPlaceholder: 'Фамилия',
+        })
+        +form-input({
+          inputLabel: 'Телефон',
+          inputType: 'tel',
+          inputPlaceholder: 'Телефон',
+        })
+        +form-input({
+          inputLabel: 'Пароль',
+          inputType: '',
+          inputPlaceholder: 'Пароль',
+        }).form-input--password
+        +form-input({
+          inputLabel: 'Пароль (еще раз)',
+          inputType: '',
+          inputPlaceholder: 'Пароль (еще раз)',
+          inputError: 'Пароли не совпадают'
+        }).form-input--password
+
+      .login-form__buttons-wrapper
+        button(type="submit").btn.btn--blue.login-form__button!=data.buttonText
+        a(href!=data.link).link.link--blue.login-form__link!=data.linkText
+
+
