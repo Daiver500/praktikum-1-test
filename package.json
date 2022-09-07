@@ -17,13 +17,15 @@
     "postcss-modules": "^4.3.1",
     "process": "^0.11.10",
     "pug": "^3.0.2",
+    "rimraf": "^3.0.2",
     "sass": "^1.54.3",
     "stylelint": "^14.9.1"
   },
   "scripts": {
+    "clean:output": "rimraf build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/pug/pages/index.pug --open --port 3000 --dist-dir build --no-source-maps",
-    "build": "parcel build src/pug/pages/index.pug --dist-dir build --no-source-maps --public-url ./"
+    "start": "npm run clean:output && parcel src/pug/pages/index.pug --open --port 3000 --dist-dir build --no-source-maps",
+    "build": "npm run clean:output && parcel build src/pug/pages/index.pug --dist-dir build --no-source-maps --public-url ./"
   },
   "repository": {
     "type": "git",
