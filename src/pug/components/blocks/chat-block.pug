@@ -1,35 +1,126 @@
 -
   const chatData = {
-    profileLink: 'Профиль',
     chatList: [
       {
-        name: "Alex"
+        name: "Alex",
+        text: 'Друзья, у меня для вас особенный выпуск новостей!...',
+        src: '../img/avatar.jpg',
+        srcset: '../img/avatar@2x.jpg',
+        width: '47',
+        height: '47',
+        alt: 'аватар',
+        time: '2016-11-18T09:54',
+        timeText: '09:54',
+        number: '2',
       },
       {
-        name: "Alex"
+        name: "Alex",
+        text: 'Друзья, у меня для вас особенный выпуск новостей!...',
+        src: '../img/avatar.jpg',
+        srcset: '../img/avatar@2x.jpg',
+        width: '47',
+        height: '47',
+        alt: 'аватар',
+        time: '2016-11-18T09:54',
+        timeText: '09:54',
+        number: '2',
       },
       {
-        name: "Alex"
+        name: "Alex",
+        text: 'Друзья, у меня для вас особенный выпуск новостей!...',
+        src: '../img/avatar.jpg',
+        srcset: '../img/avatar@2x.jpg',
+        width: '47',
+        height: '47',
+        alt: 'аватар',
+        time: '2016-11-18T09:54',
+        timeText: '09:54',
+        number: '2',
       },
       {
-        name: "Alex"
+        name: "Alex",
+        text: 'Друзья, у меня для вас особенный выпуск новостей!...',
+        src: '../img/avatar.jpg',
+        srcset: '../img/avatar@2x.jpg',
+        width: '47',
+        height: '47',
+        alt: 'аватар',
+        time: '2016-11-18T09:54',
+        timeText: '09:54',
+        number: '2',
+        isActive: true,
       },
       {
-        name: "Alex"
+        name: "Alex",
+        text: 'Друзья, у меня для вас особенный выпуск новостей!...',
+        src: '../img/avatar.jpg',
+        srcset: '../img/avatar@2x.jpg',
+        width: '47',
+        height: '47',
+        alt: 'аватар',
+        time: '2016-11-18T09:54',
+        timeText: '09:54',
+        number: '2',
       },
       {
-        name: "Alex"
+        name: "Alex",
+        text: 'Друзья, у меня для вас особенный выпуск новостей!...',
+        src: '../img/avatar.jpg',
+        srcset: '../img/avatar@2x.jpg',
+        width: '47',
+        height: '47',
+        alt: 'аватар',
+        time: '2016-11-18T09:54',
+        timeText: '09:54',
+        number: '2',
       },
       {
-        name: "Alex"
+        name: "Alex",
+        text: 'Друзья, у меня для вас особенный выпуск новостей!...',
+        src: '../img/avatar.jpg',
+        srcset: '../img/avatar@2x.jpg',
+        width: '47',
+        height: '47',
+        alt: 'аватар',
+        time: '2016-11-18T09:54',
+        timeText: '09:54',
+        number: '2',
       },
       {
-        name: "Alex"
+        name: "Alex",
+        text: 'Друзья, у меня для вас особенный выпуск новостей!...',
+        src: '../img/avatar.jpg',
+        srcset: '../img/avatar@2x.jpg',
+        width: '47',
+        height: '47',
+        alt: 'аватар',
+        time: '2016-11-18T09:54',
+        timeText: '09:54',
+        number: '2',
       },
-      {
-        name: "Alex"
+     {
+        name: "Alex",
+        text: 'Друзья, у меня для вас особенный выпуск новостей!...',
+        src: '../img/avatar.jpg',
+        srcset: '../img/avatar@2x.jpg',
+        width: '47',
+        height: '47',
+        alt: 'аватар',
+        time: '2016-11-18T09:54',
+        timeText: '09:54',
+        number: '2',
       },
     ]
+  }
+
+  const chatLinkProfile = {
+    linkText: 'Профиль',
+    link: '#',
+  }
+
+  const chatLinkBack = {
+    linkText: 'Назад',
+    link: '#'
   }
 
 mixin chat-block(data)
@@ -38,7 +129,8 @@ mixin chat-block(data)
     .chat-block__list
 
       .chat-block__link-wrapper
-        a(href="#")!=data.profileLink
+        +link(chatLinkProfile).link--grey
+        +link(chatLinkBack).link--grey
 
       .chat-block__search-wrapper
        +search-input({
@@ -46,12 +138,12 @@ mixin chat-block(data)
           inputPlaceholder: 'Поиск',
         })
 
-      .chat-list
+      ul.chat-list
         each item in data.chatList
-          +chat-item(item)
+          +chat-item(item)(class=item.isActive ? "is-active" : null)
 
 
-    .chat-block__chat
+    .chat-block__plug
       +plug-message(plugMessage)
 
 

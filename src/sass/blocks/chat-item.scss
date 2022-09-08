@@ -1,0 +1,23 @@
+.chat-item {
+  padding: 12px 10px;
+  border-top: 1px solid $color-whisper-1;
+  display: flex;
+  align-items: center;
+}
+
+.chat-item.is-active {
+  background-color: $color-solitude;
+}
+
+.chat-item__avatar-wrapper {
+  min-width: 47px;
+  min-height: 47px;
+  position: relative;
+}
+
+.chat-item__avatar {
+  min-height: 100%;
+  position: absolute;
+  width: 100%;
+  border-radius: 30px;
+}

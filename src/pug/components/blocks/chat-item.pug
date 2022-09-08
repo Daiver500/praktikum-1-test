@@ -1,6 +1,11 @@
 mixin chat-item(data)
-  li.chat-item
-    div
-    div
+  li.chat-item(class!=attributes.class)
+    div.chat-item__avatar-wrapper
+      image.chat-item__avatar(src=data.src srcset=data.srcset, width=data.width, height=data.height, alt=data.alt)
+    div.chat-item__name-wrapper
       p!=data.name
-    div
+      p!=data.text
+    div.chat-item__date-wrapper
+      time(datetime=data.time)!=data.timeText
+      p!=data.number
+
