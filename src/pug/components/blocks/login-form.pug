@@ -4,7 +4,7 @@
     buttonText: 'Авторизироваться',
     linkText: 'Нет аккаунта?',
     link: 'registration.pug',
-    chatLink: 'chat-page.pug',
+    buttonLink: 'chat-page.pug',
   }
 
   const regFormData = {
@@ -73,7 +73,10 @@ mixin login-form(data)
         }).form-input--password
 
       .login-form__buttons-wrapper
-        a(href!=data.chatLink).btn.btn--blue.login-form__button!=data.buttonText
+        if (data === loginFormData)
+          +button(loginFormData).btn--blue
+        if (data === regFormData)
+          +button(regFormData).btn--blue
         a(href!=data.link).link.link--blue.login-form__link!=data.linkText
 
 

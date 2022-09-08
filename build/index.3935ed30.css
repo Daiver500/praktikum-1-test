@@ -187,6 +187,11 @@ textarea {
   }
 }
 
+.link--grey {
+  font-size: 12px;
+  line-height: 12px;
+}
+
 .login-form {
   text-align: center;
   min-height: 450px;

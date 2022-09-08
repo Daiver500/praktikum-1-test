@@ -1,4 +1,58 @@
+-
+  const chatData = {
+    profileLink: 'Профиль',
+    chatList: [
+      {
+        name: "Alex"
+      },
+      {
+        name: "Alex"
+      },
+      {
+        name: "Alex"
+      },
+      {
+        name: "Alex"
+      },
+      {
+        name: "Alex"
+      },
+      {
+        name: "Alex"
+      },
+      {
+        name: "Alex"
+      },
+      {
+        name: "Alex"
+      },
+      {
+        name: "Alex"
+      },
+    ]
+  }
+
 mixin chat-block(data)
   .chat-block
-    h1.title CHAT-BLOCK
+
+    .chat-block__list
+
+      .chat-block__link-wrapper
+        a(href="#")!=data.profileLink
+
+      .chat-block__search-wrapper
+       +search-input({
+          inputType: 'text',
+          inputPlaceholder: 'Поиск',
+        })
+
+      .chat-list
+        each item in data.chatList
+          +chat-item(item)
+
+
+    .chat-block__chat
+      +plug-message(plugMessage)
+
+
 
