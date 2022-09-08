@@ -17,8 +17,6 @@ html(lang="ru")
   body
     main
       .container-login
-        +login-form(loginFormData).login-form--enter
-        a(href="404-page.pug")
-        a(href="500-page.pug")
+        +error-block(errorBlock404)
 
     script(type="module" src="../../js/app.js")

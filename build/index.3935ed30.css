@@ -17,6 +17,21 @@
   }
 }
 
+.container-login {
+  max-width: 400px;
+  min-height: 100vh;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .container-login {
+    padding: 0;
+  }
+}
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -133,6 +148,12 @@ textarea {
   line-height: 20px;
 }
 
+.title--big {
+  margin-bottom: 20px;
+  font-size: 40px;
+  line-height: 40px;
+}
+
 .btn {
   color: #fff;
   border: unset;
@@ -170,16 +191,15 @@ textarea {
 .login-form {
   text-align: center;
   min-height: 450px;
-  max-width: 340px;
+  min-width: 340px;
   background-color: #fff;
   border-radius: 30px;
   flex-direction: column;
   margin: 0;
   padding: 50px 30px 30px;
   display: flex;
-  position: fixed;
-  inset: calc(50% - 250px) 0 auto 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: 50%;
   box-shadow: 0 0 6px #00000024;
 }
 
@@ -187,10 +207,6 @@ textarea {
   .login-form {
     min-width: 100%;
   }
-}
-
-.login-form--reg {
-  top: calc(50% - 350px);
 }
 
 .login-form form {
@@ -202,7 +218,7 @@ textarea {
 
 .login-form__buttons-wrapper {
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: auto;
   display: flex;
 }
 
@@ -260,5 +276,19 @@ textarea {
   display: none;
   position: relative;
   bottom: 30px;
+}
+
+.error-block {
+  min-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.error-block__text {
+  margin-top: 0;
+  margin-bottom: 69px;
+  font-size: 20px;
+  line-height: 20px;
 }
 
