@@ -17,6 +17,11 @@
   font-weight: 500;
   color: $color-nero;
   outline: none;
+  transition: border-color, 0.3s ease;
+}
+
+.form-input input:focus {
+  border-color: $color-green;
 }
 
 .form-input input::placeholder {
