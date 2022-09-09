@@ -12,6 +12,11 @@
   background-repeat: no-repeat;
   top: -2px;
   left: 36%;
+
+  @include vp-1023 {
+    top: -3px;
+    left: 33%;
+  }
 }
 
 .search-input input {

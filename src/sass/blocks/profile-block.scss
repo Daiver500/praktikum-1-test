@@ -2,8 +2,12 @@
   display: grid;
   min-width: 100%;
   min-height: 720px;
-  grid-template-columns: 8.9% 91.1%;
+  grid-template-columns: 4.9% 95.1%;
   background-color: $color-default-white;
+
+  @include vp-767 {
+    grid-template-columns: 10% 90%;
+  }
 }
 
 .profile-block__back {
@@ -28,8 +32,8 @@
 .profile-block__info {
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
-
+  padding: 60px 20px;
+  align-items: center;
 }
 
 

@@ -1,0 +1,58 @@
+-
+
+  const changeInfoLinkData = {
+    linkText: 'Изменить данные',
+    link: '#',
+  }
+
+  const changePasswordLinkData = {
+    linkText: 'Изменить пароль',
+    link: '#',
+  }
+
+  const exitLinkData = {
+    linkText: 'Выйти',
+    link: 'index.pug',
+  }
+
+mixin profile-form(data)
+  .profile-form(class!=attributes.class)
+    +file-upload(data.data)
+    .profile-form__name-wrapper
+      p.profile-form__name!=data.data.name
+    form
+      +form-input({
+        inputLabel: 'Почта',
+        inputType: 'email',
+        inputPlaceholder: 'pochta@yandex.ru',
+      })
+      +form-input({
+        inputLabel: 'Логин',
+        inputType: 'text',
+        inputPlaceholder: 'ivanivanov',
+      })
+      +form-input({
+        inputLabel: 'Имя',
+        inputType: 'text',
+        inputPlaceholder: 'Иван',
+      })
+      +form-input({
+        inputLabel: 'Фамилия',
+        inputType: 'text',
+        inputPlaceholder: 'Иванов',
+      })
+      +form-input({
+        inputLabel: 'Имя в чате',
+        inputType: 'text',
+        inputPlaceholder: 'Иван',
+      })
+      +form-input({
+        inputLabel: 'Телефон',
+        inputType: 'tel',
+        inputPlaceholder: '+7 (909) 967 30 30',
+      })
+    .profile-form__buttons-wrapper
+      if (data === profileFormImageTextData)
+        +link(changeInfoLinkData).profile-form__link
+        +link(changePasswordLinkData).profile-form__link
+        +link(exitLinkData).profile-form__link.link--red
