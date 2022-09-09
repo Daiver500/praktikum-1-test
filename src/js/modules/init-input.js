@@ -1,5 +1,5 @@
 
-const initInput = () => {
+const initLoginFormInput = () => {
   const formInputs = document.querySelectorAll('.form-input input');
 
   const showLabel = (evt) => {
@@ -19,4 +19,4 @@ const initInput = () => {
   });
 };
 
-export {initInput};
+export {initLoginFormInput};
