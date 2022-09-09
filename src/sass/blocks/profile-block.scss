@@ -1,0 +1,35 @@
+.profile-block {
+  display: grid;
+  min-width: 100%;
+  min-height: 720px;
+  grid-template-columns: 8.9% 91.1%;
+  background-color: $color-default-white;
+}
+
+.profile-block__back {
+  background-color: $color-snow;
+  border-right: 1px solid $color-whisper-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-block__button {
+  padding: 9px;
+  border-radius: 15px;
+}
+
+.profile-block__button img {
+  width: 13px;
+  height: 12px;
+}
+
+.profile-block__info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+
+}
+
+

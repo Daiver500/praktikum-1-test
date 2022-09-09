@@ -115,7 +115,7 @@
 
   const chatLinkProfile = {
     linkText: 'Профиль',
-    link: '#',
+    link: 'profile-page.pug',
   }
 
   const chatLinkBack = {
@@ -144,7 +144,7 @@ mixin chat-block(data)
           +chat-item(item)(class=item.isActive ? "is-active" : null)
 
 
-    .chat-block__plug
+    .chat-block__chat
       +plug-message(plugMessage)
 
 

@@ -1,7 +1,7 @@
 .chat-block {
   display: grid;
   min-width: 100%;
-  max-height: 720px;
+  min-height: 720px;
   grid-template-columns: 24.2% 75.8%;
   background-color: $color-default-white;
 }
@@ -21,15 +21,10 @@
   height: 0;
 }
 
-.chat-block__plug {
+.chat-block__chat {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $color-nobel;
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 500;
-  cursor: pointer;
+  flex-direction: column;
+  padding: 10px 20px;
 }
 
 .chat-block__link-wrapper,

@@ -74,10 +74,10 @@ mixin login-form(data)
 
       .login-form__buttons-wrapper
         if (data === loginFormData)
-          +button(loginFormData).btn--blue
+          +button(loginFormData).btn--blue.login-form__button
           +link(loginFormData).login-form__link
         if (data === regFormData)
-          +button(regFormData).btn--blue
+          +button(regFormData).btn--blue.login-form__button
           +link(regFormData).login-form__link
 
 
