@@ -1,5 +1,5 @@
 import '../js/index';
-import {initLoginFormInput} from './modules/init-input';
+import {initLoginFormInput} from './modules/init-login-form-input';
 import {initChatItem} from './modules/init-chat-item';
 
 
