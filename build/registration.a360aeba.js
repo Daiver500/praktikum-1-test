@@ -534,11 +534,13 @@ function hmrAcceptRun(bundle, id) {
 },{}],"6PrCY":[function(require,module,exports) {
 var _index = require("../js/index");
 var _initInput = require("./modules/init-input");
+var _initChatItem = require("./modules/init-chat-item");
 window.addEventListener("DOMContentLoaded", ()=>{
     (0, _initInput.initInput)();
+    (0, _initChatItem.initChatItem)();
 });
 
-},{"../js/index":"1uJD7","./modules/init-input":"hBGUH"}],"1uJD7":[function(require,module,exports) {
+},{"../js/index":"1uJD7","./modules/init-input":"hBGUH","./modules/init-chat-item":"gRDmL"}],"1uJD7":[function(require,module,exports) {
 var _styleScss = require("../sass/style.scss");
 
 },{"../sass/style.scss":"jwfLM"}],"jwfLM":[function() {},{}],"hBGUH":[function(require,module,exports) {
@@ -547,17 +549,17 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "initInput", ()=>initInput);
 const initInput = ()=>{
     const formInputs = document.querySelectorAll(".form-input input");
-    const AddLabelName = (evt)=>{
+    const showLabel = (evt)=>{
         const target = evt.target.closest(".form-input");
         target.classList.add("is-focused");
     };
     formInputs.forEach((item)=>{
-        item.addEventListener("input", AddLabelName);
+        item.addEventListener("input", showLabel);
         const inputParent = item.closest(".form-input");
-        const removeLabelName = ()=>{
+        const hideLabel = ()=>{
             if (item.value === "") inputParent.classList.remove("is-focused");
         };
-        item.addEventListener("input", removeLabelName);
+        item.addEventListener("input", hideLabel);
     });
 };
 
@@ -591,5 +593,23 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["2HloI","6PrCY"], "6PrCY", "parcelRequirebdfc")
+},{}],"gRDmL":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "initChatItem", ()=>initChatItem);
+const initChatItem = ()=>{
+    const chatItems = document.querySelectorAll(".chat-item");
+    const enableActiveChat = (evt)=>{
+        const target = evt.target.closest(".chat-item");
+        chatItems.forEach((chat)=>{
+            chat.classList.remove("is-active");
+            target.classList.add("is-active");
+        });
+    };
+    chatItems.forEach((chat)=>{
+        chat.addEventListener("click", enableActiveChat);
+    });
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"j7FRh"}]},["2HloI","6PrCY"], "6PrCY", "parcelRequirebdfc")
 

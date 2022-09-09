@@ -2,20 +2,20 @@
 const initInput = () => {
   const formInputs = document.querySelectorAll('.form-input input');
 
-  const AddLabelName = (evt) => {
+  const showLabel = (evt) => {
     const target = evt.target.closest('.form-input');
     target.classList.add('is-focused');
   };
 
   formInputs.forEach((item) => {
-    item.addEventListener('input', AddLabelName);
+    item.addEventListener('input', showLabel);
     const inputParent = item.closest('.form-input');
-    const removeLabelName = () => {
+    const hideLabel = () => {
       if (item.value === '') {
         inputParent.classList.remove('is-focused');
       }
     };
-    item.addEventListener('input', removeLabelName);
+    item.addEventListener('input', hideLabel);
   });
 };
 

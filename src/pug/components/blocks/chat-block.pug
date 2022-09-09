@@ -120,7 +120,7 @@
 
   const chatLinkBack = {
     linkText: 'Назад',
-    link: '#'
+    link: 'index.pug'
   }
 
 mixin chat-block(data)
@@ -129,8 +129,9 @@ mixin chat-block(data)
     .chat-block__list
 
       .chat-block__link-wrapper
-        +link(chatLinkProfile).link--grey
-        +link(chatLinkBack).link--grey
+        +link(chatLinkBack).link--grey.chat-block__link-back
+        +link(chatLinkProfile).link--grey.chat-block__link-profile
+
 
       .chat-block__search-wrapper
        +search-input({
