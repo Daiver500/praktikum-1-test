@@ -1,28 +1,16 @@
--
-  const profileFormButtonData = {
-    buttonText: '',
-    buttonLink: 'chat-page.pug',
-  }
-
-  const profileFormImageTextData = {
-    data: {
-    src: './img/load-avatar.png',
-    srcset: './img/load-avatar@2x.png',
-    width: '40',
-    height: '40',
-    alt: 'загрузка аватара',
-    name: 'Иван',
-    textAvatar: 'Поменять аватар',
-    }
-  }
 
 mixin profile-block(data)
   .profile-block(class!=attributes.class)
     .profile-block__back
-      +button(profileFormButtonData).profile-block__button
-        image(src="./img/svg/icon-arrow-back.svg", width="11px", height="10px", alt="кнопка назад")
+      if (data === profileFormButtonBackToChat)
+        +button(data).profile-block__button
+          image(src="./img/svg/icon-arrow-back.svg", width="11px", height="10px", alt="кнопка назад")
+      if (data === profileFormButtonBackToProfile)
+        +button(data).profile-block__button
+          image(src="./img/svg/icon-arrow-back.svg", width="11px", height="10px", alt="кнопка назад")
     .profile-block__info
-      +profile-form(profileFormImageTextData).profile-form--unactive
+      if block
+        block
 
 
 

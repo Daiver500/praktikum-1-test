@@ -1,6 +1,6 @@
 -
-  const chatData = {
-    chatList: [
+  const chatData = [
+
       {
         name: "Alex",
         text: 'Друзья, у меня для вас особенный выпуск новостей!...',
@@ -111,7 +111,7 @@
         number: '2',
       },
     ]
-  }
+
 
   const chatLinkProfile = {
     linkText: 'Профиль',
@@ -140,7 +140,7 @@ mixin chat-block(data)
         })
 
       ul.chat-list
-        each item in data.chatList
+        each item in chatData
           +chat-item(item)(class=item.isActive ? "is-active" : null)
 
 
