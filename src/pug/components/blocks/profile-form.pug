@@ -30,7 +30,7 @@
     const profileChangeLink =
      {
       buttonText: 'Сохранить',
-      buttonLink: 'profile-page.pug',
+      buttonLink: '#',
      }
 
 
@@ -95,6 +95,6 @@ mixin profile-form(data)
         each item in profileLinks
          +link(item).profile-form__link(class=item.isActive ? "link--red" : null)
       if (data === profileChangeLink || data === profilePassword)
-         +button(profileChangeLink).btn--large.profile-form__button
+         +button(profileChangeLink).btn--large.profile-form__button.profile-form__button-save
 
 

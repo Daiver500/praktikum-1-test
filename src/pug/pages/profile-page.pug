@@ -19,12 +19,13 @@ html(lang="ru")
       buttonLink: 'chat-page.pug',
     }
 
+
   body
     main(class="page")
       .container
         +profile-block(profileFormButtonBackToChat).profile-block--profile
           .container.container--profile
             +profile-form(profileLinks).profile-form--unactive
-    +modal()
+
 
     script(type="module" src="../../js/app.js")

@@ -1,9 +1,7 @@
-mixin modal(data)
-  .modal
-    .modal__wrapper
-      .modal__overlay
-      .modal__content
-        if block
-          block
+mixin modal
+  .modal(class!=attributes.class)
+    .modal__inner
+      if block
+        block
 
 

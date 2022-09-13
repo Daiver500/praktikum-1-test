@@ -19,12 +19,23 @@ html(lang="ru")
       buttonLink: 'profile-page.pug',
     }
 
+    const modalAvatarLoadData = {
+      title: 'Данные успешно изменены',
+      button: {
+        buttonText: 'В личный кабинет',
+        buttonLink: '#',
+      }
+    }
+
   body
     main(class="page")
       .container
         +profile-block(profileFormButtonBackToProfile).profile-block--change
           .container.container--profile
             +profile-form(profileChangeLink).profile-form--active
-
+      +modal().modal--change
+        +modal-change(modalAvatarLoadData)
 
     script(type="module" src="../../js/app.js")
+
+
