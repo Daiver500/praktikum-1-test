@@ -1,9 +1,9 @@
 mixin modal(data)
-  .modal.modal--preload()&attributes(attributes)
+  .modal
     .modal__wrapper
-      .modal__overlay(data-close-modal)
+      .modal__overlay
       .modal__content
         if block
           block
-        button.modal__close-btn(type="button", aria-label="Закрыть попап", data-close-modal)
+
 
