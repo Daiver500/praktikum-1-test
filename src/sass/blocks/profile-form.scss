@@ -21,14 +21,19 @@
 }
 
 .profile-form .form-input input {
-  padding-left: 100px;
+  text-align: right;
   font-size: 14px;
   margin-bottom: 21px;
   min-height: 23px;
-}
-
-.profile-form .form-input input:not(:last-child) {
   border-bottom: 1px solid $color-whisper-1;
+  transition: border-color, 0.3s ease;
+
+  @media (hover: hover), screen and (min-width: 0) {
+    &:hover,
+    &:focus {
+      border-color: $color-tory-blue;
+    }
+  }
 }
 
 .profile-form .form-input input::placeholder {
@@ -41,6 +46,11 @@
   flex-direction: column;
   margin-top: auto;
   margin-top: 60px;
+}
+
+.profile-form__button {
+  display: flex;
+  justify-content: center;
 }
 
 .profile-form__link:not(:last-child) {

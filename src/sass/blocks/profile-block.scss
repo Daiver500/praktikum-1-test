@@ -37,3 +37,19 @@
 }
 
 
+.profile-block--password .profile-form__buttons-wrapper,
+.profile-block--change  .profile-form__buttons-wrapper {
+  align-items: center;
+}
+
+.profile-block--password .profile-form__name,
+.profile-block--change  .profile-form__name {
+  opacity: 0;
+}
+
+.profile-block--password .file-upload,
+.profile-block--change  .file-upload {
+  pointer-events: none;
+}
+
+

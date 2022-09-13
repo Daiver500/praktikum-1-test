@@ -23,7 +23,8 @@ html(lang="ru")
     main(class="page")
       .container
         +profile-block(profileFormButtonBackToChat).profile-block--profile
-          +profile-form(profileLinks).profile-form--unactive
+          .container.container--profile
+            +profile-form(profileLinks).profile-form--unactive
 
 
     script(type="module" src="../../js/app.js")

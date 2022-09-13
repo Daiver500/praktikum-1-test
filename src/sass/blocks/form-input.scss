@@ -17,10 +17,13 @@
   color: $color-nero;
   outline: none;
   transition: border-color, 0.3s ease;
-}
 
-.form-input input:focus {
-  border-color: $color-green;
+  @media (hover: hover), screen and (min-width: 0) {
+    &:hover,
+    &:focus {
+      border-color: $color-green;
+    }
+  }
 }
 
 .form-input input::placeholder {

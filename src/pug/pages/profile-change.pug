@@ -23,7 +23,8 @@ html(lang="ru")
     main(class="page")
       .container
         +profile-block(profileFormButtonBackToProfile).profile-block--change
-          +profile-form(profileChangeLink).profile-form--active
+          .container.container--profile
+            +profile-form(profileChangeLink).profile-form--active
 
 
     script(type="module" src="../../js/app.js")

@@ -73,22 +73,28 @@ mixin profile-form(data)
         })
       if (data === profilePassword)
         +form-input({
-          inputLabel: 'Пароль',
-          inputType: '',
-          inputPlaceholder: 'Пароль',
-        }).form-input--password
+          inputLabel: 'Старый пароль',
+          inputType: 'password',
+          inputPlaceholder: '********',
+          inputError: 'Пароль не верный',
+        }).form-input--old-password
         +form-input({
-          inputLabel: 'Пароль (еще раз)',
-          inputType: '',
-          inputPlaceholder: 'Пароль (еще раз)',
+          inputLabel: 'Новый пароль',
+          inputType: 'password',
+          inputPlaceholder: '********',
+        }).form-input--new-password
+        +form-input({
+          inputLabel: 'Новый пароль еще раз',
+          inputType: 'password',
+          inputPlaceholder: '*******',
           inputError: 'Пароли не совпадают'
-        }).form-input--password
+        }).form-input--new-password
 
     .profile-form__buttons-wrapper
       if (data === profileLinks)
         each item in profileLinks
          +link(item).profile-form__link(class=item.isActive ? "link--red" : null)
       if (data === profileChangeLink || data === profilePassword)
-         +button(profileChangeLink)
+         +button(profileChangeLink).btn--large.profile-form__button
 
 
